@@ -64,3 +64,4 @@ typings/
 *.tsbuildinfo
 
 src\datasources\mongo.datasource.ts
+proyecto_ciclo_4_2\src\datasources\mongo.datasource.ts
