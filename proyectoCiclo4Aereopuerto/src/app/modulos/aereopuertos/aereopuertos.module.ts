@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { AereopuertosRoutingModule } from './aereopuertos-routing.module';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { GetComponent } from './get/get.component';
-
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { GetComponent } from './get/get.component';
     GetComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AereopuertosRoutingModule
   ]
 })
-export class RutaModule { }
+export class AereopuertosModule { }
