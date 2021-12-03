@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AereopuertosRoutingModule} from './aereopuertos-routing.module';
+import {CreateComponent} from './create/create.component';
+import {EditComponent} from './edit/edit.component';
+import {GetComponent} from './get/get.component';
 
-import { AereopuertosRoutingModule } from './aereopuertos-routing.module';
-import { CreateComponent } from './create/create.component';
-import { EditComponent } from './edit/edit.component';
-import { GetComponent } from './get/get.component';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { GetComponent } from './get/get.component';
   ],
   imports: [
     CommonModule,
-    AereopuertosRoutingModule
+    AereopuertosRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AereopuertosModule { }

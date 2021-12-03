@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'create/aereopuertos',
     component: CreateComponent,
   }, {
-    path: 'edit/aereopuertos',
+    path: 'edit/:id',
     component: EditComponent,
   }, {
     path: 'get/aereopuertos',

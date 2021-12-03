@@ -7,49 +7,49 @@ export class Vuelo extends Entity {
     id: true,
     generated: true,
   })
-  Id?: string;
+  iid?: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  FechaInicio: string;
+  fechaInicio: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  FechaFin: string;
+  fechaFin: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  HoraInicio: string;
+  horaInicio: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  HoraFin: string;
+  horaFin: string;
 
   @property({
     type: 'number',
     required: true,
   })
-  AsientosVendidos: number;
+  asientosVendidos: number;
 
   @property({
     type: 'string',
     required: true,
   })
-  NombrePiloto: string;
+  nombrePiloto: string;
 
   @property({
     type: 'string',
     required: true,
   })
-  Ruta: string;
+  ruta: string;
 
 
   constructor(data?: Partial<Vuelo>) {

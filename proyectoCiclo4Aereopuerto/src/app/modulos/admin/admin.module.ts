@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AdminRoutingModule} from './admin-routing.module';
+import {CreateComponent} from './usuarios/create/create.component';
+import {EditComponent} from './usuarios/edit/edit.component';
+import {GetComponent} from './usuarios/get/get.component';
 
-import { AdminRoutingModule } from './admin-routing.module';
-import { CreateComponent } from './usuarios/create/create.component';
-import { EditComponent } from './usuarios/edit/edit.component';
-import { GetComponent } from './usuarios/get/get.component';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import { GetComponent } from './usuarios/get/get.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

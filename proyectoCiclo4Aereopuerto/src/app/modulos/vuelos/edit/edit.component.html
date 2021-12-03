@@ -1,1 +1,52 @@
-<p>edit works!</p>
+<div class="container">
+  <h3 class="center-align">Editar Vuelos</h3>
+
+  <form [formGroup]="fgValidacion" class="col s12" (ngSubmit)="edit()">
+    <input formControlName="id" type="hidden" class="validate">
+    <div class="row">
+      <div class="input-field col s6">
+        <input formControlName="Fecha Inicio" type="text" class="validate">
+        <label class="active" for="Fecha Inicio">Nombre</label>
+      </div>
+      <div class="input-field col s6">
+        <input formControlName="Fecha Fin" type="text" class="validate">
+        <label class="active" for="Fecha Fin">Apellidos</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="Hora Inicio" type="text" class="validate">
+        <label class="active" for="Hora Inicio">Telefono</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="Hora Fin" type="text" class="validate">
+        <label class="active" for="Hora Fin">Telefono</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="Asientos Vendidos" type="text" class="validate">
+        <label class="active" for="Asientos Vendidos">Telefono</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="Nombre Piloto" type="text" class="validate">
+        <label class="active" for="Nombre Piloto">Telefono</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input formControlName="Ruta" type="text" class="validate">
+        <label class="active" for="Ruta">Telefono</label>
+      </div>
+    </div>
+    <div class="row center-align">
+      <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </form>
+</div>

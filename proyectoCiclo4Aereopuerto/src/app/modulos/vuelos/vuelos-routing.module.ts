@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'create/vuelos',
     component: CreateComponent,
   }, {
-    path: 'edit/vuelos',
+    path: 'edit/:id',
     component: EditComponent,
   }, {
     path: 'get/vuelos',

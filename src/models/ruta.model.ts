@@ -14,7 +14,7 @@ export class Ruta extends Entity {
     type: 'string',
     required: true,
   })
-  TiempoEstimado: string;
+  tiempoEstimado: string;
 
   @belongsTo(() => Aereopuerto, {name: 'A_Origen'})
   origen: string;
