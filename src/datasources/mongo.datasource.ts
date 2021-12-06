@@ -2,6 +2,15 @@ import {inject, lifeCycleObserver, LifeCycleObserver} from '@loopback/core';
 import {juggler} from '@loopback/repository';
 
 const config = {
+  name: 'mongo',
+  connector: 'mongodb',
+  url: 'mongodb+srv://ProyectoCiclo4:ProyectoCiclo4@proyectociclo4.z8krx.mongodb.net/test',
+  host: '',
+  port: 0,
+  user: '',
+  password: '',
+  database: '',
+  useNewUrlParser: true
 
 };
 
