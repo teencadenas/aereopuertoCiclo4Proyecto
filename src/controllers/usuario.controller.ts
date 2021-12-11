@@ -59,13 +59,14 @@ export class UsuarioController {
     // Notificamos al usuario por correo
     let destino = usuario.correo;
     // Notifiamos al usuario por telefono y cambiar la url por send_sms
-    // let destino = usuario.telefono;
+    //let destino = usuario.Telefono;
 
     let asunto = 'Registro de usuario en plataforma';
     let contenido = `Hola, ${usuario.nombre} ${usuario.apellido} su contraseña en el portal es: ${clave}`
     axios({
       method: 'post',
       url: 'http://localhost:5000/send_email', //Si quiero enviar por mensaje cambiar a send_sms
+      //url: 'http://localhost:5000/send_sms',  // Si quiero enviar por mensaje cambiar a send_sms
 
       headers: {
         'Accept': 'application/json',
@@ -81,8 +82,6 @@ export class UsuarioController {
     }).catch((err: any) => {
       console.log(err)
     })
-
-
     return p;
   }
 

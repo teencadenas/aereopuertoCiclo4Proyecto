@@ -21,7 +21,7 @@ export class CreateComponent implements OnInit {
   fgValidacion = this.fb.group({
     nombre: ['', [Validators.required]],
     apellidos: ['', [Validators.required]],
-    telefono: ['', [Validators.required, Validators.minLength(6)]],
+    telefono: ['', [Validators.required, Validators.minLength(10)]],
     correo: ['', [Validators.required, Validators.email]],
   });
 

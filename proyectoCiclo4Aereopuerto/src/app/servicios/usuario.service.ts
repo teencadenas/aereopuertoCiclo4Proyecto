@@ -22,8 +22,8 @@ export class UsuarioService {
   store(usuario: UsuarioModelo): Observable<UsuarioModelo> {
     return this.http.post<UsuarioModelo>(`${this.url}/usuarios`, {
       nombre: usuario.nombre,
-      apellidos: usuario.apellidos,
-      telefono: usuario.telefono,
+      apellido: usuario.apellidos,
+      Telefono: usuario.telefono,
       correo: usuario.correo
     });
   }
@@ -39,8 +39,8 @@ export class UsuarioService {
   update(usuario: UsuarioModelo): Observable<UsuarioModelo> {
     return this.http.patch<UsuarioModelo>(`${this.url}/usuarios/${usuario.id}`, {
       nombre: usuario.nombre,
-      apellidos: usuario.apellidos,
-      telefono: usuario.telefono,
+      apellido: usuario.apellidos,
+      Telefono: usuario.telefono,
       correo: usuario.correo
     }, {
       headers: new HttpHeaders({

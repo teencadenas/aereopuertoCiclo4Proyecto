@@ -31,7 +31,7 @@ export class VueloController {
         'application/json': {
           schema: getModelSchemaRef(Vuelo, {
             title: 'NewVuelo',
-            exclude: ['Id'],
+            exclude: ['id'],
           }),
         },
       },

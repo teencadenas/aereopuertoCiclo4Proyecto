@@ -5,7 +5,7 @@ import {Vuelo, VueloRelations} from '../models';
 
 export class VueloRepository extends DefaultCrudRepository<
   Vuelo,
-  typeof Vuelo.prototype.Id,
+  typeof Vuelo.prototype.id,
   VueloRelations
 > {
   constructor(

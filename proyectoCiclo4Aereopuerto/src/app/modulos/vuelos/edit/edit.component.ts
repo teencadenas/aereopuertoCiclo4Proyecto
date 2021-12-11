@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
+import {RutaModelo} from 'src/app/modelos/ruta.modelo';
 import {VueloModelo} from 'src/app/modelos/vuelo.modelo';
 import {VueloService} from 'src/app/servicios/vuelo.service';
 import Swal from 'sweetalert2';
@@ -11,6 +12,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+  rutaService: any;
 
   constructor(
     private fb: FormBuilder,
@@ -18,6 +20,8 @@ export class EditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute
   ) { }
+
+  listadoRutas: RutaModelo[] = []
 
   fgValidacion = this.fb.group({
     id: ['', [Validators.required]],
@@ -70,6 +74,14 @@ export class EditComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.route.snapshot.params["id"]
     this.buscarRegistro(this.id);
+    this.getAllRutas()
+  }
+
+  getAllRutas() {
+    this.rutaService.getAll().subscribe((data: RutaModelo[]) => {
+      this.listadoRutas = data
+      console.log(data)
+    })
   }
 
 }

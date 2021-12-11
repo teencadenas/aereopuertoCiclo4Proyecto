@@ -7,7 +7,7 @@ export class Vuelo extends Entity {
     id: true,
     generated: true,
   })
-  iid?: string;
+  id?: string;
 
   @property({
     type: 'string',

@@ -7,17 +7,20 @@
         <label for="Tiempo estimado">Nombre</label>
       </div>
       <div class="input-field col s4">
-        <input formControlName="Origen" type="text" class="validate">
-        <label for="Origen">Apellidos</label>
+        <select class="browser-default" formControlName="origen">
+          <option value="" disabled selected>Seleccione aereopuerto</option>
+          <option *ngFor="let aereopuerto of listadoAeropuertos" value="{{aereopuerto.nombre}}">{{aereopuerto.nombre}}
+          </option>
+        </select>
       </div>
-    </div>
-    <div class="row">
       <div class="input-field col s4">
-        <input formControlName="destino" type="text" class="validate">
-        <label for="destino">Telefono</label>
+        <select class="browser-default" formControlName="origen">
+          <option value="" disabled selected>Seleccione aereopuerto</option>
+          <option *ngFor="let aereopuerto of listadoAeropuertos" value="{{aereopuerto.nombre}}">{{aereopuerto.nombre}}
+          </option>
+        </select>
       </div>
     </div>
-
     <div class="row center-align">
       <button [disabled]="!fgValidacion.valid" class="btn waves-effect waves-light" type="submit" name="action">Enviar
         <i class="material-icons right">send</i>
